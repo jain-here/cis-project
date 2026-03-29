@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import type { DNSAnalysis } from '@/types';
 
+export const dynamic = 'force-dynamic';
+
 const DOH_BASE = 'https://dns.google/resolve';
 const RECORD_TYPES = ['A', 'AAAA', 'MX', 'TXT', 'NS', 'CNAME'] as const;
 

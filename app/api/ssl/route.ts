@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-
 import * as tls from 'tls';
+
+export const dynamic = 'force-dynamic';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Self-hosted TLS inspector — replaces SSL Labs entirely.

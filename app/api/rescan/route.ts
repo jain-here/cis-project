@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createServerClient } from '@/lib/supabase';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
   const { scanId } = await req.json().catch(() => ({}));
   if (!scanId) return NextResponse.json({ error: 'scanId required' }, { status: 400 });

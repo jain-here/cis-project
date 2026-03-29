@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import type { CVEAnalysis } from '@/types';
 
+export const dynamic = 'force-dynamic';
+
 const NVD_BASE = 'https://services.nvd.nist.gov/rest/json/cves/2.0';
 const CVE_ALLOWLIST = new Set(['nginx', 'apache', 'iis', 'node.js', 'express']);
 const CVE_BLOCKLIST = new Set(['server', 'cloudfront', 'gws', 'elb', 'akamai']);

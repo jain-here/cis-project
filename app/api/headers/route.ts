@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { normalizeUrl, extractDomain } from '@/lib/utils';
 import type { HeadersAnalysis, Finding } from '@/types';
 
+export const dynamic = 'force-dynamic';
+
 interface HeaderConfig {
   name: string;
   display: string;

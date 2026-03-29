@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+export const dynamic = 'force-dynamic';
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Self-hosted Observatory replacement — replicates Mozilla Observatory scoring.
 // Analyzes security headers directly. No external API, no rate limits, instant.

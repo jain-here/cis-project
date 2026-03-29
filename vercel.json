@@ -1,13 +1,13 @@
 {
   "functions": {
     "app/api/ssl/route.ts": {
-      "maxDuration": 300
+      "maxDuration": 60
     },
     "app/api/observatory/route.ts": {
-      "maxDuration": 120
+      "maxDuration": 60
     },
     "app/api/scan/route.ts": {
-      "maxDuration": 300
+      "maxDuration": 60
     }
   },
   "crons": [

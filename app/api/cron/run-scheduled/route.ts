@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createServerClient } from '@/lib/supabase';
 
+export const dynamic = 'force-dynamic';
+
 // This route is called by Vercel Cron or an external scheduler
 // Add to vercel.json: { "crons": [{ "path": "/api/cron/run-scheduled", "schedule": "0 * * * *" }] }
 export async function GET(req: NextRequest) {

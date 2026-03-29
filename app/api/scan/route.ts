@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createServerClient } from '@/lib/supabase';
 import { calculateRiskScore } from '@/lib/scoring';
 import { extractDomain, normalizeUrl } from '@/lib/utils';
+
+export const dynamic = 'force-dynamic';
 import type {
   SSLAnalysis,
   HeadersAnalysis,
