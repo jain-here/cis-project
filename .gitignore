@@ -37,3 +37,4 @@ Thumbs.db
 # Tooling caches
 .eslintcache
 *.log
+.vercel
