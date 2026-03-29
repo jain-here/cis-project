@@ -27,9 +27,13 @@ pnpm-debug.log*
 
 # TypeScript
 *.tsbuildinfo
-next-env.d.ts
 
 # OS/editor files
 .DS_Store
 Thumbs.db
 .vscode/
+.idea/
+
+# Tooling caches
+.eslintcache
+*.log
