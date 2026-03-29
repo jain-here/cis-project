@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createServerClient } from '@/lib/supabase';
 import { calculateRiskScore } from '@/lib/scoring';
 import { extractDomain, normalizeUrl } from '@/lib/utils';
-
-export const dynamic = 'force-dynamic';
 import type {
   SSLAnalysis,
   HeadersAnalysis,
@@ -125,8 +123,8 @@ export async function POST(req: NextRequest) {
   const scanId = scan.id;
   console.log('[SCAN] Created scan record:', scanId);
 
-  // Respond immediately — processing is async
-  (async () => {
+  // Process inside the request lifecycle so Vercel does not terminate work early.
+  await (async () => {
     try {
       console.log('[SCAN] Starting async API calls for:', domain);
       const [sslResult, headersResult, dnsResult, observatoryResult, headersForCVEResult] =
