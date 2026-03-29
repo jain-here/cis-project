@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "app/api/ssl/route.ts": {
+      "maxDuration": 300
+    },
+    "app/api/observatory/route.ts": {
+      "maxDuration": 120
+    },
+    "app/api/scan/route.ts": {
+      "maxDuration": 300
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/run-scheduled",
+      "schedule": "0 * * * *"
+    }
+  ]
+}
